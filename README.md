@@ -2,12 +2,9 @@
 
 Regular UI - Modal
 
-## Modal
+## Modal（模态对话框）
 
-样例
-
-基本示例: http://regular-ui.github.io/ui-modal/modal/index.html
-高级案例: http://regular-ui.github.io/ui-modal/modal/case.html
+- 基础示例+API: http://regular-ui.github.io/ui-modal/modal/index.html
 
 ## Copyright and License
 

@@ -12,10 +12,10 @@
 ```
 
 ```javascript
-var component = new RGUI.Component({
-    template: template,
-    show: function() {
-        var modal = new RGUI.Modal({
+let component = new RGUI.Component({
+    template,
+    show() {
+        let modal = new RGUI.Modal({
             data: {
                 title: 'Modal标题',
                 content: 'Modal内容'
@@ -34,9 +34,9 @@ var component = new RGUI.Component({
 ```
 
 ```javascript
-var component = new RGUI.Component({
-    template: template,
-    show: function() {
+let component = new RGUI.Component({
+    template,
+    show() {
         RGUI.Modal.alert('Alert内容');
     }
 });
@@ -51,15 +51,17 @@ var component = new RGUI.Component({
 ```
 
 ```javascript
-var component = new RGUI.Component({
-    template: template,
-    show: function() {
+let component = new RGUI.Component({
+    template,
+    show() {
         RGUI.Modal.confirm('Confirm内容');
     }
 });
 ```
 
 ### 事件
+
+请打开浏览器的控制台查看结果。
 
 <div class="m-example"></div>
 
@@ -69,7 +71,7 @@ var component = new RGUI.Component({
 
 ```javascript
 let component = new RGUI.Component({
-    template: template,
+    template,
     show() {
         let modal = new RGUI.Modal({
             data: {
@@ -77,9 +79,9 @@ let component = new RGUI.Component({
                 content: 'Modal内容',
                 cancelButton: ''
             }
-        }).$on('close', () => console.log('close'))
-          .$on('ok', () => console.log('ok'))
-          .$on('cancel', () => console.log('cancel'));
+        }).$on('close', () => console.log('on-close'))
+          .$on('ok', () => console.log('on-ok'))
+          .$on('cancel', () => console.log('on-cancel'));
     }
 });
 ```

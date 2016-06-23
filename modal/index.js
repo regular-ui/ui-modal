@@ -8,8 +8,8 @@ import template from './index.rgl';
  * @param {string='提示'}           options.data.title               => 对话框标题
  * @param {string=''}               options.data.content             => 对话框内容
  * @param {string=''}               options.data.contentTemplate    @=> 对话框内容模板，用于支持复杂内容的自定义。
- * @param {string|boolean=true}     options.data.okButton            => 是否显示确定按钮。值为`string`时显示该段文字。
- * @param {string|boolean=false}    options.data.cancelButton        => 是否显示取消按钮。值为`string`时显示该段文字。
+ * @param {string='确定'}           options.data.okButton            => 确定按钮的文字，如果为空则不显示。
+ * @param {string='取消'}           options.data.cancelButton        => 取消按钮的文字，如果为空则不显示。
  * @param {string=''}               options.data.class               => 补充class
  */
 let Modal = Component.extend({
@@ -17,6 +17,7 @@ let Modal = Component.extend({
     template: template,
     /**
      * @protected
+     * @override
      */
     config() {
         this.data = Object.assign({
@@ -30,6 +31,7 @@ let Modal = Component.extend({
     },
     /**
      * @protected
+     * @override
      */
     init() {
         this.supr();

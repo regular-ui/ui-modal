@@ -8,12 +8,8 @@
             {#if contentTemplate}{#inc @(contentTemplate)}{#else}{content}{/if}
         </div>
         <div class="modal_ft">
-            {#if okButton}
-            <button class="u-btn u-btn-primary" r-autofocus on-click={this.ok()}>{okButton}</button>
-            {/if}
-            {#if cancelButton}
-            <button class="u-btn" on-click={this.cancel()}>{cancelButton}</button>
-            {/if}
+            {#if okButton}<button class="u-btn u-btn-primary" r-autofocus on-click={this.ok()}>{okButton}</button>{/if}
+            {#if cancelButton}<button class="u-btn" on-click={this.cancel()}>{cancelButton}</button>{/if}
         </div>
     </div>
 </div>
