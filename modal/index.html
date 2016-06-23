@@ -43,10 +43,10 @@
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-primary&quot;</span> <span class="cm-attribute">on-click</span>=<span class="cm-attribute">{this.show()}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>Modal<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
-<pre class="lang-javascript"><code><span class="cm-keyword">var</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
-    <span class="cm-property">template</span>: <span class="cm-variable">template</span>,
-    <span class="cm-property">show</span>: <span class="cm-keyword">function</span>() {
-        <span class="cm-keyword">var</span> <span class="cm-def">modal</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Modal</span>({
+<pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
+    <span class="cm-property">template</span>,
+    <span class="cm-property">show</span>() {
+        <span class="cm-keyword">let</span> <span class="cm-def">modal</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Modal</span>({
             <span class="cm-property">data</span>: {
                 <span class="cm-property">title</span>: <span class="cm-string">&#39;Modal标题&#39;</span>,
                 <span class="cm-property">content</span>: <span class="cm-string">&#39;Modal内容&#39;</span>
@@ -60,9 +60,9 @@
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-error&quot;</span> <span class="cm-attribute">on-click</span>=<span class="cm-attribute">{this.show()}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>Alert<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
-<pre class="lang-javascript"><code><span class="cm-keyword">var</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
-    <span class="cm-property">template</span>: <span class="cm-variable">template</span>,
-    <span class="cm-property">show</span>: <span class="cm-keyword">function</span>() {
+<pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
+    <span class="cm-property">template</span>,
+    <span class="cm-property">show</span>() {
         <span class="cm-variable">RGUI</span>.<span class="cm-property">Modal</span>.<span class="cm-property">alert</span>(<span class="cm-string">&#39;Alert内容&#39;</span>);
     }
 });
@@ -72,20 +72,21 @@
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-success&quot;</span> <span class="cm-attribute">on-click</span>=<span class="cm-attribute">{this.show()}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>Confirm<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
-<pre class="lang-javascript"><code><span class="cm-keyword">var</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
-    <span class="cm-property">template</span>: <span class="cm-variable">template</span>,
-    <span class="cm-property">show</span>: <span class="cm-keyword">function</span>() {
+<pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
+    <span class="cm-property">template</span>,
+    <span class="cm-property">show</span>() {
         <span class="cm-variable">RGUI</span>.<span class="cm-property">Modal</span>.<span class="cm-property">confirm</span>(<span class="cm-string">&#39;Confirm内容&#39;</span>);
     }
 });
 </code></pre>
 <h3 id="事件">事件</h3>
+<p>请打开浏览器的控制台查看结果。</p>
 <div class="m-example"></div>
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-primary&quot;</span> <span class="cm-attribute">on-click</span>=<span class="cm-attribute">{this.show()}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>Modal<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
 <pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
-    <span class="cm-property">template</span>: <span class="cm-variable">template</span>,
+    <span class="cm-property">template</span>,
     <span class="cm-property">show</span>() {
         <span class="cm-keyword">let</span> <span class="cm-def">modal</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Modal</span>({
             <span class="cm-property">data</span>: {
@@ -93,9 +94,9 @@
                 <span class="cm-property">content</span>: <span class="cm-string">&#39;Modal内容&#39;</span>,
                 <span class="cm-property">cancelButton</span>: <span class="cm-string">&#39;&#39;</span>
             }
-        }).<span class="cm-property">$on</span>(<span class="cm-string">&#39;close&#39;</span>, () <span class="cm-operator">=&gt;</span> <span class="cm-variable">console</span>.<span class="cm-variable">log</span>(<span class="cm-string">&#39;close&#39;</span>))
-          .<span class="cm-variable">$on</span>(<span class="cm-string">&#39;ok&#39;</span>, () <span class="cm-operator">=&gt;</span> <span class="cm-variable">console</span>.<span class="cm-variable">log</span>(<span class="cm-string">&#39;ok&#39;</span>))
-          .<span class="cm-variable">$on</span>(<span class="cm-string">&#39;cancel&#39;</span>, () <span class="cm-operator">=&gt;</span> <span class="cm-variable">console</span>.<span class="cm-variable">log</span>(<span class="cm-string">&#39;cancel&#39;</span>));
+        }).<span class="cm-property">$on</span>(<span class="cm-string">&#39;close&#39;</span>, () <span class="cm-operator">=&gt;</span> <span class="cm-variable">console</span>.<span class="cm-variable">log</span>(<span class="cm-string">&#39;on-close&#39;</span>))
+          .<span class="cm-variable">$on</span>(<span class="cm-string">&#39;ok&#39;</span>, () <span class="cm-operator">=&gt;</span> <span class="cm-variable">console</span>.<span class="cm-variable">log</span>(<span class="cm-string">&#39;on-ok&#39;</span>))
+          .<span class="cm-variable">$on</span>(<span class="cm-string">&#39;cancel&#39;</span>, () <span class="cm-operator">=&gt;</span> <span class="cm-variable">console</span>.<span class="cm-variable">log</span>(<span class="cm-string">&#39;on-cancel&#39;</span>));
     }
 });
 </code></pre>
@@ -117,17 +118,17 @@
     <tbody>
         
             
-            <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性 | Binding Properties</td></tr>
+            <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
             
-            <tr><td class="f-wsn"><code>data.title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td class="f-tac">outer  =&gt; inner</td><td>对话框标题 | Title of Dialog</td></tr>
+            <tr><td class="f-wsn"><code>data.title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td class="f-tac">outer  =&gt; inner</td><td>对话框标题</td></tr>
             
             <tr><td class="f-wsn"><code>data.content</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outer  =&gt; inner</td><td>对话框内容</td></tr>
             
-            <tr><td class="f-wsn"><code>data.contentTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outer  =&gt; inner</td><td>对话框内容模板，用于支持复杂内容的自定义。</td></tr>
+            <tr><td class="f-wsn"><code>data.contentTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outer @=&gt; inner</td><td>对话框内容模板，用于支持复杂内容的自定义。</td></tr>
             
-            <tr><td class="f-wsn"><code>data.okButton</code></td><td class="f-wsn">string<br>boolean</td><td class="f-wsn"><code>true</code></td><td class="f-tac">outer  =&gt; inner</td><td>是否显示确定按钮。值为`string`时显示该段文字。</td></tr>
+            <tr><td class="f-wsn"><code>data.okButton</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;确定&#39;</code></td><td class="f-tac">outer  =&gt; inner</td><td>确定按钮的文字，如果为空则不显示。</td></tr>
             
-            <tr><td class="f-wsn"><code>data.cancelButton</code></td><td class="f-wsn">string<br>boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outer  =&gt; inner</td><td>是否显示取消按钮。值为`string`时显示该段文字。</td></tr>
+            <tr><td class="f-wsn"><code>data.cancelButton</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;取消&#39;</code></td><td class="f-tac">outer  =&gt; inner</td><td>取消按钮的文字，如果为空则不显示。</td></tr>
             
             <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outer  =&gt; inner</td><td>补充class</td></tr>
             
@@ -399,11 +400,11 @@ var index = 0;
                     cancelButton: ''
                 }
             }).$on('close', function () {
-                return console.log('close');
+                return console.log('on-close');
             }).$on('ok', function () {
-                return console.log('ok');
+                return console.log('on-ok');
             }).$on('cancel', function () {
-                return console.log('cancel');
+                return console.log('on-cancel');
             });
         }
     });
