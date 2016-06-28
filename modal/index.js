@@ -14,7 +14,7 @@ import template from './index.rgl';
  */
 let Modal = Component.extend({
     name: 'modal',
-    template: template,
+    template,
     /**
      * @protected
      * @override
