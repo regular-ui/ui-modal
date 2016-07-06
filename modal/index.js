@@ -1,4 +1,4 @@
-import {Component, _} from 'rgui-base';
+import { Component } from 'rgui-base';
 import template from './index.rgl';
 
 /**
@@ -12,7 +12,7 @@ import template from './index.rgl';
  * @param {string='取消'}           options.data.cancelButton        => 取消按钮的文字，如果为空则不显示。
  * @param {string=''}               options.data.class               => 补充class
  */
-let Modal = Component.extend({
+const Modal = Component.extend({
     name: 'modal',
     template,
     /**
@@ -25,7 +25,7 @@ let Modal = Component.extend({
             content: '',
             contentTemplate: '',
             okButton: '确定',
-            cancelButton: '取消'
+            cancelButton: '取消',
         }, this.data);
         this.supr();
     },
@@ -51,7 +51,7 @@ let Modal = Component.extend({
          * @property {object} sender 事件发送对象
          */
         this.$emit('close', {
-            sender: this
+            sender: this,
         });
 
         this.destroy();
@@ -67,7 +67,7 @@ let Modal = Component.extend({
          * @property {object} sender 事件发送对象
          */
         this.$emit('ok', {
-            sender: this
+            sender: this,
         });
 
         this.close();
@@ -83,11 +83,11 @@ let Modal = Component.extend({
          * @property {object} sender 事件发送对象
          */
         this.$emit('cancel', {
-            sender: this
+            sender: this,
         });
 
         this.close();
-    }
+    },
 });
 
 /**
@@ -98,13 +98,13 @@ let Modal = Component.extend({
  * @param  {string='提示'} title 对话框标题
  * @return {Modal} modal 返回该对话框
  */
-Modal.alert = function(content, title = '提示', okButton = '确定') {
-    let modal = new this({
-        data: {content, title, okButton, cancelButton: ''}
+Modal.alert = function (content, title = '提示', okButton = '确定') {
+    const modal = new this({
+        data: { content, title, okButton, cancelButton: '' },
     });
 
     return modal;
-}
+};
 
 /**
  * @method confirm(content[,title]) 弹出一个confirm对话框
@@ -114,12 +114,12 @@ Modal.alert = function(content, title = '提示', okButton = '确定') {
  * @param  {string='提示'} title 对话框标题
  * @return {Modal} modal 返回该对话框
  */
-Modal.confirm = function(content, title = '提示', okButton = '确定', cancelButton = '取消') {
-    let modal = new this({
-        data: {content, title, okButton, cancelButton}
+Modal.confirm = function (content, title = '提示', okButton = '确定', cancelButton = '取消') {
+    const modal = new this({
+        data: { content, title, okButton, cancelButton },
     });
 
     return modal;
-}
+};
 
 export default Modal;
