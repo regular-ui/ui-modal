@@ -1,4 +1,4 @@
-import { Component } from 'rgui-base';
+import { Component } from 'rgui-ui-base';
 import template from './index.rgl';
 
 /**
@@ -37,7 +37,7 @@ const Modal = Component.extend({
         this.supr();
 
         // 如果不是内嵌组件，则嵌入到document.body中
-        if(this.$root === this)
+        if (this.$root === this)
             this.$inject(document.body);
     },
     /**
