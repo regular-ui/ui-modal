@@ -8,8 +8,8 @@
   "homepage": "http://regular-ui.github.io",
   "bugs": {"url": "http://github.com/regular-ui/ui-modal/issues"},
   "license": "MIT",
-  "keywords": ["regular", "ui", "modal"],
-  "tags": ["regular", "ui", "modal"],
+  "keywords": ["regular", "ui", "rgui", "modal"],
+  "tags": ["regular", "ui", "rgui", "modal"],
   "dependencies": {
     "rgui-ui-base": "0.2.0-alpha.2"
   }
