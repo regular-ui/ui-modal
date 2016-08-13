@@ -19,7 +19,7 @@ Regular UI - Modal, Lightbox
 [download-img]: https://img.shields.io/npm/dm/rgui-ui-modal.svg?style=flat-square
 [download-url]: https://npmjs.org/package/rgui-ui-modal
 
-## Modal（模态对话框）
+## Modal（模态框）
 
 - 基础示例+进阶案例+API: https://regular-ui.github.io/ui-modal/modal/index.html
 
