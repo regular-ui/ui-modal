@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<!-- 该文件由rgui-tools自动生成 -->
+<meta charset="utf-8">
+<title>Regular UI - Modal</title>
+<meta name="author" content="Rainfore">
+<meta name="keywords" content="Regular,UI,JavaScript,Framework,MVC,MVVM">
+<meta name="description" content="Regular UI">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/doc.default.min.css">
+<link rel="stylesheet" href="../css/index.css">
+<!--[if lt IE9]>
+<script>
+(function() {
+    if (!
+    /*@cc_on!@*/
+    0) return;
+    var e = 'abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video'.split(', ');
+    var i= e.length;
+    while (i--)
+        document.createElement(e[i]);
+})();
+</script>
+<![endif]-->
+</head>
+<body>
+<div class="g-top">
+    <div class="g-topc">
+        <a class="u-logo" href="./">Regular UI</a>
+    </div>
+</div>
+<div class="g-bd"><div class="g-bdc"><div class="g-mn g-mn-center">
+    <article class="m-article">
+        <h1>模态对话框<small> Modal</small></h1>
+        <h2 id="示例">示例</h2>
+<h3 id="disabled的使用">Disabled的使用</h3>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-primary&quot;</span> <span class="cm-attribute">on-click</span>=<span class="cm-attribute">{this.show()}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>Modal<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tagcm-bracket">&gt;</span>
+</code></pre>
+<pre class="lang-javascript"><code><span class="cm-keyword">const</span> <span class="cm-variable">FormModal</span> <span class="cm-operator">=</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Modal</span>.<span class="cm-property">extend</span>({
+    <span class="cm-property">config</span>() {
+        <span class="cm-keyword">this</span>.<span class="cm-property">data</span> <span class="cm-operator">=</span> <span class="cm-variable">Object</span>.<span class="cm-property">assign</span>({
+            <span class="cm-property">username</span>: <span class="cm-string">&#39;&#39;</span>,
+            <span class="cm-property">password</span>: <span class="cm-string">&#39;&#39;</span>,
+            <span class="cm-property">contentTemplate</span>:
+<span class="cm-string-2">`&lt;input class=&quot;u-input&quot; r-model={username} /&gt;</span>
+<span class="cm-string-2">&lt;input class=&quot;u-input&quot; r-model={password} /&gt;`</span>,
+        }, <span class="cm-keyword">this</span>.<span class="cm-property">data</span>);
+        <span class="cm-keyword">this</span>.<span class="cm-property">supr</span>();
+        <span class="cm-keyword">this</span>.<span class="cm-property">watch</span>();
+    },
+    <span class="cm-property">computed</span>: {
+        <span class="cm-property">canSubmit</span>() {
+            <span class="cm-keyword">return</span> <span class="cm-keyword">this</span>.<span class="cm-property">data</span>.<span class="cm-property">username</span> <span class="cm-operator">&amp;&amp;</span> <span class="cm-keyword">this</span>.<span class="cm-property">data</span>.<span class="cm-property">password</span>;
+        },
+    },
+    <span class="cm-property">watch</span>() {
+        <span class="cm-keyword">this</span>.<span class="cm-property">$watch</span>([<span class="cm-string">&#39;username&#39;</span>, <span class="cm-string">&#39;password&#39;</span>], () <span class="cm-operator">=&gt;</span> {
+            <span class="cm-keyword">this</span>.<span class="cm-variable">data</span>.<span class="cm-variable">disabled</span> <span class="cm-operator">=</span> <span class="cm-operator">!</span><span class="cm-keyword">this</span>.<span class="cm-variable">$get</span>(<span class="cm-string">&#39;canSubmit&#39;</span>);
+        });
+    },
+});
+
+<span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
+    <span class="cm-property">template</span>,
+    <span class="cm-property">show</span>() {
+        <span class="cm-keyword">let</span> <span class="cm-def">modal</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">FormModal</span>();
+    }
+});
+</code></pre>
+
+        
+    </article>
+</div>
+</div></div><div class="g-ft">
+    <footer class="m-footer">
+        <p><a href="https://regular-ui.github.io/v0.2/" class="footer_logo"><img src="https://regular-ui.github.io/v0.2/img/logo-v2.0-bg-48.png" /></p>
+        <p>
+            <a href="https://github.com/regular-ui/regular-ui" target="_blank">GitHub</a> |
+            <a href="https://github.com/regular-ui/regular-ui/issues" target="_blank">Issues</a> |
+            <a href="https://github.com/regular-ui/regular-ui/releases" target="_blank">ChangeLog</a> |
+            <a href="https://github.com/regular-ui/regular-ui/blob/master/CONTRIBUTING.md" target="_blank">Contributing</a>
+        </p>
+        <p>Licensed under <a href="https://github.com/regular-ui/regular-ui/blob/master/LICENSE" target="_blank">MIT license</a>.</p>
+    </footer>
+</div>
+<script src="https://regular-ui.github.io/v0.2/vendor/polyfill.min.js"></script>
+<script src="https://regular-ui.github.io/v0.2/vendor/regular.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="https://regular-ui.github.io/v0.2/js/helper.js"></script>
+<script>
+'use strict';
+
+var index = 0;
+(function (index) {
+    var template = '<button class="u-btn u-btn-primary" on-click={this.show()}>Modal</button>';
+    var FormModal = RGUI.Modal.extend({
+        config: function config() {
+            this.data = Object.assign({
+                username: '',
+                password: '',
+                contentTemplate: '<input class="u-input" r-model={username} />\n<input class="u-input" r-model={password} />'
+            }, this.data);
+            this.supr();
+            this.watch();
+        },
+
+        computed: {
+            canSubmit: function canSubmit() {
+                return this.data.username && this.data.password;
+            }
+        },
+        watch: function watch() {
+            var _this = this;
+
+            this.$watch(['username', 'password'], function () {
+                _this.data.disabled = !_this.$get('canSubmit');
+            });
+        }
+    });
+
+    var component = new RGUI.Component({
+        template: template,
+        show: function show() {
+            var modal = new FormModal();
+        }
+    });
+    component && component.$inject($$(".m-example")[index]);
+})(index++);
+</script>
+</body>
+</html>
