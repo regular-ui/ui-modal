@@ -34,9 +34,9 @@
 </div>
 <div class="g-bd"><div class="g-bdc"><div class="g-mn g-mn-center">
     <article class="m-article">
-        <h1>模态对话框<small> Modal</small></h1>
+        <h1>模态框<small> Modal</small></h1>
         <p>含有遮罩层的对话框，用于模拟浏览器的<code>alert</code>、<code>confirm</code>和<code>prompt</code>。</p>
-<p>模态对话框通过遮罩层来阻止用户的其他行为。</p>
+<p>模态框通过遮罩层来阻止用户的其他行为。</p>
 <h2 id="示例">示例</h2>
 <h3 id="基本形式">基本形式</h3>
 <div class="m-example"></div>
@@ -49,10 +49,10 @@
         <span class="cm-keyword">let</span> <span class="cm-def">modal</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Modal</span>({
             <span class="cm-property">data</span>: {
                 <span class="cm-property">title</span>: <span class="cm-string">&#39;Modal标题&#39;</span>,
-                <span class="cm-property">content</span>: <span class="cm-string">&#39;Modal内容&#39;</span>
-            }
+                <span class="cm-property">content</span>: <span class="cm-string">&#39;Modal内容&#39;</span>,
+            },
         });
-    }
+    },
 });
 </code></pre>
 <h3 id="alert">Alert</h3>
@@ -64,7 +64,7 @@
     <span class="cm-property">template</span>,
     <span class="cm-property">show</span>() {
         <span class="cm-variable">RGUI</span>.<span class="cm-property">Modal</span>.<span class="cm-property">alert</span>(<span class="cm-string">&#39;Alert内容&#39;</span>);
-    }
+    },
 });
 </code></pre>
 <h3 id="confirm">Confirm</h3>
@@ -76,7 +76,26 @@
     <span class="cm-property">template</span>,
     <span class="cm-property">show</span>() {
         <span class="cm-variable">RGUI</span>.<span class="cm-property">Modal</span>.<span class="cm-property">confirm</span>(<span class="cm-string">&#39;Confirm内容&#39;</span>);
-    }
+    },
+});
+</code></pre>
+<h3 id="disabled">Disabled</h3>
+<p>设置<code>disabled</code>为<code>true</code>，可以禁用确定按钮。</p>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-warning&quot;</span> <span class="cm-attribute">on-click</span>=<span class="cm-attribute">{this.show()}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>Modal<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tagcm-bracket">&gt;</span>
+</code></pre>
+<pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
+    <span class="cm-property">template</span>,
+    <span class="cm-property">show</span>() {
+        <span class="cm-keyword">let</span> <span class="cm-def">modal</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Modal</span>({
+            <span class="cm-property">data</span>: {
+                <span class="cm-property">title</span>: <span class="cm-string">&#39;Modal标题&#39;</span>,
+                <span class="cm-property">content</span>: <span class="cm-string">&#39;Modal内容&#39;</span>,
+                <span class="cm-property">disabled</span>: <span class="cm-atom">true</span>
+            },
+        });
+    },
 });
 </code></pre>
 <h3 id="事件">事件</h3>
@@ -92,12 +111,12 @@
             <span class="cm-property">data</span>: {
                 <span class="cm-property">title</span>: <span class="cm-string">&#39;Modal标题&#39;</span>,
                 <span class="cm-property">content</span>: <span class="cm-string">&#39;Modal内容&#39;</span>,
-                <span class="cm-property">cancelButton</span>: <span class="cm-string">&#39;&#39;</span>
-            }
+                <span class="cm-property">cancelButton</span>: <span class="cm-string">&#39;&#39;</span>,
+            },
         }).<span class="cm-property">$on</span>(<span class="cm-string">&#39;close&#39;</span>, () <span class="cm-operator">=&gt;</span> <span class="cm-variable">console</span>.<span class="cm-variable">log</span>(<span class="cm-string">&#39;on-close&#39;</span>))
           .<span class="cm-variable">$on</span>(<span class="cm-string">&#39;ok&#39;</span>, () <span class="cm-operator">=&gt;</span> <span class="cm-variable">console</span>.<span class="cm-variable">log</span>(<span class="cm-string">&#39;on-ok&#39;</span>))
           .<span class="cm-variable">$on</span>(<span class="cm-string">&#39;cancel&#39;</span>, () <span class="cm-operator">=&gt;</span> <span class="cm-variable">console</span>.<span class="cm-variable">log</span>(<span class="cm-string">&#39;on-cancel&#39;</span>));
-    }
+    },
 });
 </code></pre>
 
@@ -120,11 +139,11 @@
             
             <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
             
-            <tr><td class="f-wsn"><code>data.title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>对话框标题</td></tr>
+            <tr><td class="f-wsn"><code>data.title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>模态框标题</td></tr>
             
-            <tr><td class="f-wsn"><code>data.content</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>对话框内容</td></tr>
+            <tr><td class="f-wsn"><code>data.content</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>模态框内容</td></tr>
             
-            <tr><td class="f-wsn"><code>data.contentTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside @=&gt; inside</td><td>对话框内容模板，用于支持复杂内容的自定义。</td></tr>
+            <tr><td class="f-wsn"><code>data.contentTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside @=&gt; inside</td><td>模态框内容模板，用于支持复杂内容的自定义。</td></tr>
             
             <tr><td class="f-wsn"><code>data.okButton</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;确定&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>确定按钮的文字，如果为空则不显示。</td></tr>
             
@@ -144,7 +163,7 @@
     
     
     <h4>modal.close()</h4>
-    <p>关闭对话框</p>
+    <p>关闭模态框</p>
     <table>
         <thead>
             <tr><th width="25%">参数</th><th width="25%">类型</th><th width="25%">默认值</th><th width="25%">描述</th></tr>
@@ -166,7 +185,7 @@
     
     
     <h4>modal.ok()</h4>
-    <p>确定对话框</p>
+    <p>确定模态框</p>
     <table>
         <thead>
             <tr><th width="25%">参数</th><th width="25%">类型</th><th width="25%">默认值</th><th width="25%">描述</th></tr>
@@ -188,7 +207,7 @@
     
     
     <h4>modal.cancel()</h4>
-    <p>取消对话框</p>
+    <p>取消模态框</p>
     <table>
         <thead>
             <tr><th width="25%">参数</th><th width="25%">类型</th><th width="25%">默认值</th><th width="25%">描述</th></tr>
@@ -216,7 +235,7 @@
     
     
     <h4>Modal.alert(content[, title])</h4>
-    <p>弹出一个alert对话框。关闭时始终触发确定事件。</p>
+    <p>弹出一个alert模态框。关闭时始终触发确定事件。</p>
     <table>
         <thead>
             <tr><th width="25%">参数</th><th width="25%">类型</th><th width="25%">默认值</th><th width="25%">描述</th></tr>
@@ -224,9 +243,9 @@
         <tbody>
             
                 
-                <tr><td class="f-wsn"><code>content</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td>对话框内容</td></tr>
+                <tr><td class="f-wsn"><code>content</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td>模态框内容</td></tr>
                 
-                <tr><td class="f-wsn"><code>title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td>对话框标题</td></tr>
+                <tr><td class="f-wsn"><code>title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td>模态框标题</td></tr>
                 
             
         </tbody>
@@ -235,14 +254,14 @@
         </thead>
         <tbody>
             
-                <tr><td class="f-wsn"><code>modal</code></td><td class="f-wsn">Modal</td><td colspan="2">返回该对话框</td></tr>
+                <tr><td class="f-wsn"><code>modal</code></td><td class="f-wsn">Modal</td><td colspan="2">返回该模态框</td></tr>
             
         </tbody>
     </table>
     
     
     <h4>Modal.confirm(content[, title])</h4>
-    <p>弹出一个confirm对话框</p>
+    <p>弹出一个confirm模态框</p>
     <table>
         <thead>
             <tr><th width="25%">参数</th><th width="25%">类型</th><th width="25%">默认值</th><th width="25%">描述</th></tr>
@@ -250,9 +269,9 @@
         <tbody>
             
                 
-                <tr><td class="f-wsn"><code>content</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td>对话框内容</td></tr>
+                <tr><td class="f-wsn"><code>content</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td>模态框内容</td></tr>
                 
-                <tr><td class="f-wsn"><code>title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td>对话框标题</td></tr>
+                <tr><td class="f-wsn"><code>title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td>模态框标题</td></tr>
                 
             
         </tbody>
@@ -261,7 +280,7 @@
         </thead>
         <tbody>
             
-                <tr><td class="f-wsn"><code>modal</code></td><td class="f-wsn">Modal</td><td colspan="2">返回该对话框</td></tr>
+                <tr><td class="f-wsn"><code>modal</code></td><td class="f-wsn">Modal</td><td colspan="2">返回该模态框</td></tr>
             
         </tbody>
     </table>
@@ -277,7 +296,7 @@
     
     
     <h4>modal.$on('close')</h4>
-    <p>关闭对话框时触发</p>
+    <p>关闭模态框时触发</p>
     <table>
         <thead>
             <tr><th width="33%">属性</th><th width="33%">类型</th><th width="33%">描述</th></tr>
@@ -293,7 +312,7 @@
     
     
     <h4>modal.$on('ok')</h4>
-    <p>确定对话框时触发</p>
+    <p>确定模态框时触发</p>
     <table>
         <thead>
             <tr><th width="33%">属性</th><th width="33%">类型</th><th width="33%">描述</th></tr>
@@ -309,7 +328,7 @@
     
     
     <h4>modal.$on('cancel')</h4>
-    <p>取消对话框时触发</p>
+    <p>取消模态框时触发</p>
     <table>
         <thead>
             <tr><th width="33%">属性</th><th width="33%">类型</th><th width="33%">描述</th></tr>
@@ -382,6 +401,22 @@ var index = 0;
         template: template,
         show: function show() {
             RGUI.Modal.confirm('Confirm内容');
+        }
+    });
+    component && component.$inject($$(".m-example")[index]);
+})(index++);
+(function (index) {
+    var template = '<button class="u-btn u-btn-warning" on-click={this.show()}>Modal</button>';
+    var component = new RGUI.Component({
+        template: template,
+        show: function show() {
+            var modal = new RGUI.Modal({
+                data: {
+                    title: 'Modal标题',
+                    content: 'Modal内容',
+                    disabled: true
+                }
+            });
         }
     });
     component && component.$inject($$(".m-example")[index]);
