@@ -1,0 +1,7 @@
+<div class="m-lightbox {class}" r-hide={!visible}>
+    <div class="lightbox_dialog">
+        <h3 class="lightbox_title">{title}</h3>
+        <a class="lightbox_close" on-click={this.close()}></a>
+        {#if contentTemplate}{#inc @(contentTemplate)}{#else}{content}{/if}
+    </div>
+</div>

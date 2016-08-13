@@ -1,6 +1,6 @@
 # ui-modal
 
-Regular UI - Modal
+Regular UI - Modal, Lightbox
 
 [![NPM Version][npm-img]][npm-url]
 [![Build Status][travis-img]][travis-url]
@@ -21,7 +21,11 @@ Regular UI - Modal
 
 ## Modal（模态对话框）
 
-- 基础示例+API: https://regular-ui.github.io/ui-modal/modal/index.html
+- 基础示例+进阶案例+API: https://regular-ui.github.io/ui-modal/modal/index.html
+
+## Lightbox（灯箱）
+
+- 基础示例+进阶案例+API: https://regular-ui.github.io/ui-modal/lightbox/index.html
 
 ## Copyright and License
 

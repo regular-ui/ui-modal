@@ -1,8 +1,8 @@
 <div class="m-modal {class}" r-hide={!visible}>
     <div class="modal_dialog">
         <div class="modal_hd">
-            <a class="modal_close" on-click={cancelButton ? this.cancel() : this.ok()}><i class="u-icon u-icon-close"></i></a>
             <h3 class="modal_title">{title}</h3>
+            <a class="modal_close" on-click={cancelButton ? this.cancel() : this.ok()}></a>
         </div>
         <div class="modal_bd">
             {#if contentTemplate}{#inc @(contentTemplate)}{#else}{content}{/if}

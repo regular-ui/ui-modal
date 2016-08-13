@@ -1,7 +1,7 @@
-// Component:       `m-modal`
+// Component:       `m-lightbox`
 // ========================================================================
 
-.m-modal {
+.m-lightbox {
     // - Hide by default
     // display: none;
     // - Set fixed position
@@ -12,7 +12,7 @@
     left: 0;
     z-index: 1000;
     // - 允许模态对话框在模态层里滚动，因为有时候内容可能会比较多
-    // - Allow scrolling for the modal dialog
+    // - Allow scrolling for the lightbox dialog
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     // // - Fade-in transition
@@ -31,43 +31,31 @@
         height: 100%;
     }
 
-    .modal_dialog {
+    .lightbox_dialog {
         display: inline-block;
+        position: relative;
         vertical-align: middle;
         text-align: left;
     }
 
-    .modal_hd {
-        position: relative;
-    }
-
-    .modal_title {
+    .lightbox_title {
+        position: absolute;
         margin: 0;
     }
 
-    .modal_close {
+    .lightbox_close {
         position: absolute;
 
         &:hover {}
     }
 
-    .modal_bd {}
-
-    .modal_ft {
-        .u-btn {}
-    }
+    .lightbox_bd {}
 
     // - Phone landscape and smaller
     @media (max-width: $media-sm-max-width) {
         // - Fit in small screen
-        .modal_dialog {
+        .lightbox_dialog {
             width: auto;
         }
     }
-}
-
-// - 禁止Modal的时候后面的内容还可以滚动，很重要的一条！
-html.z-modal,
-html.z-modal body {
-    overflow: hidden;
 }

@@ -1,3 +1,4 @@
 import Modal from './modal';
+import Lightbox from './lightbox';
 
-export { Modal };
+export { Modal, Lightbox };
