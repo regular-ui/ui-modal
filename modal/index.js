@@ -10,6 +10,7 @@ import template from './index.rgl';
  * @param {string=''}               options.data.contentTemplate    @=> 对话框内容模板，用于支持复杂内容的自定义。
  * @param {string='确定'}           options.data.okButton            => 确定按钮的文字，如果为空则不显示。
  * @param {string='取消'}           options.data.cancelButton        => 取消按钮的文字，如果为空则不显示。
+ * @param {boolean=false}           options.data.disabled            => 是否禁用。禁用时，确定按钮不可点。
  * @param {string=''}               options.data.class               => 补充class
  */
 const Modal = Component.extend({
@@ -62,6 +63,10 @@ const Modal = Component.extend({
      * @return {void}
      */
     ok() {
+        // 禁用时，确定按钮不可点。
+        if (this.data.disabled)
+            return;
+
         /**
          * @event ok 确定对话框时触发
          * @property {object} sender 事件发送对象

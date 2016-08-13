@@ -36,3 +36,27 @@ let component = new RGUI.Component({
     },
 });
 ```
+
+### 事件
+
+请打开浏览器的控制台查看结果。
+
+<div class="m-example"></div>
+
+```xml
+<button class="u-btn u-btn-primary" on-click={this.show()}>Lightbox</button>
+```
+
+```javascript
+let component = new RGUI.Component({
+    template,
+    show() {
+        let modal = new RGUI.Lightbox({
+            data: {
+                title: '图片预览',
+                contentTemplate: `<img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/3.jpg" />`,
+            },
+        }).$on('close', () => console.log('on-close'));
+    },
+});
+```
