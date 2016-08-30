@@ -43,13 +43,13 @@
 </code></pre>
 <pre class="lang-javascript"><code><span class="cm-keyword">const</span> <span class="cm-variable">FormModal</span> <span class="cm-operator">=</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Modal</span>.<span class="cm-property">extend</span>({
     <span class="cm-property">config</span>() {
-        <span class="cm-keyword">this</span>.<span class="cm-property">data</span> <span class="cm-operator">=</span> <span class="cm-variable">Object</span>.<span class="cm-property">assign</span>({
+        <span class="cm-keyword">this</span>.<span class="cm-property">defaults</span>({
             <span class="cm-property">username</span>: <span class="cm-string">&#39;&#39;</span>,
             <span class="cm-property">password</span>: <span class="cm-string">&#39;&#39;</span>,
             <span class="cm-property">contentTemplate</span>:
 <span class="cm-string-2">`&lt;input class=&quot;u-input&quot; r-model={username} /&gt;</span>
 <span class="cm-string-2">&lt;input class=&quot;u-input&quot; r-model={password} /&gt;`</span>,
-        }, <span class="cm-keyword">this</span>.<span class="cm-property">data</span>);
+        });
         <span class="cm-keyword">this</span>.<span class="cm-property">supr</span>();
         <span class="cm-keyword">this</span>.<span class="cm-property">watch</span>();
     },
@@ -100,11 +100,11 @@ var index = 0;
     var template = '<button class="u-btn u-btn-primary" on-click={this.show()}>Modal</button>';
     var FormModal = RGUI.Modal.extend({
         config: function config() {
-            this.data = Object.assign({
+            this.defaults({
                 username: '',
                 password: '',
                 contentTemplate: '<input class="u-input" r-model={username} />\n<input class="u-input" r-model={password} />'
-            }, this.data);
+            });
             this.supr();
             this.watch();
         },
