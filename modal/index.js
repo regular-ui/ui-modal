@@ -21,13 +21,13 @@ const Modal = Component.extend({
      * @override
      */
     config() {
-        this.data = Object.assign({
+        this.defaults({
             title: '提示',
             content: '',
             contentTemplate: '',
             okButton: '确定',
             cancelButton: '取消',
-        }, this.data);
+        });
         this.supr();
     },
     /**

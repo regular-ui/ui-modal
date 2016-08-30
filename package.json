@@ -1,7 +1,7 @@
 {
   "name": "rgui-ui-modal",
   "description": "Regular UI - Modal, Lightbox",
-  "version": "0.2.0-alpha.1",
+  "version": "0.2.0-alpha.2",
   "author": "Rainfore <rainforest92@126.com>",
   "main": "./index.js",
   "repository": "regular-ui/ui-modal",
@@ -11,7 +11,7 @@
   "keywords": ["regular", "ui", "rgui", "modal", "lightbox"],
   "tags": ["regular", "ui", "rgui", "modal", "lightbox"],
   "dependencies": {
-    "rgui-ui-base": "^0.2.0-alpha.4"
+    "rgui-ui-base": "^0.2.0-alpha.5"
   },
   "peerDependencies": {
     "regularjs": "^0.4.3"

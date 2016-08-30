@@ -10,13 +10,13 @@
 ```javascript
 const FormModal = RGUI.Modal.extend({
     config() {
-        this.data = Object.assign({
+        this.defaults({
             username: '',
             password: '',
             contentTemplate:
 `<input class="u-input" r-model={username} />
 <input class="u-input" r-model={password} />`,
-        }, this.data);
+        });
         this.supr();
         this.watch();
     },

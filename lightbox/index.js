@@ -17,10 +17,10 @@ const Lightbox = Component.extend({
      * @override
      */
     config() {
-        this.data = Object.assign({
+        this.defaults({
             title: '标题',
             contentTemplate: '',
-        }, this.data);
+        });
         this.supr();
     },
     /**
