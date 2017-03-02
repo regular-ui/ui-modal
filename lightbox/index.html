@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/doc.default.min.css">
+<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/docs.default.min.css">
 <link rel="stylesheet" href="../css/index.css">
 <!--[if lt IE9]>
 <script>
@@ -88,32 +88,34 @@
 
         <h2 id="API">API</h2>
 
-<h3 id="Class">Class</h3>
-<h4>Lightbox</h4>
-<p>继承自<strong>Component</strong>。</p>
-<p></p>
-<div id="j-class"></div>
 
-<h3 id="Options">Options</h3>
-<h4>new Lightbox()</h4>
-<table>
-    <thead>
-        <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
-    </thead>
-    <tbody>
-        
+    <h3 id="Class">Class</h3>
+    <h4>Lightbox</h4>
+    <p>继承自<strong></strong>。</p>
+    <p></p>
+    <div id="j-class"></div>
+
+    <h3 id="Options">Options</h3>
+    <h4>new Lightbox()</h4>
+    <table>
+        <thead>
+            <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
+        </thead>
+        <tbody>
             
-            <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">Object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>灯箱标题</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.contentTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside @=&gt; inside</td><td>灯箱内容模板，用于支持复杂内容的自定义。</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
+                
             
-            <tr><td class="f-wsn"><code>data.title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>灯箱标题</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.contentTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside @=&gt; inside</td><td>灯箱内容模板，用于支持复杂内容的自定义。</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
-            
-        
-    </tbody>
-</table>
+        </tbody>
+    </table>
+
 <div id="j-options"></div>
 
 
@@ -198,7 +200,7 @@
 
 var index = 0;
 (function (index) {
-    var template = '<button class="u-btn u-btn-info" on-click={this.showImage()}>图片预览</button>\n<button class="u-btn u-btn-success" on-click={this.showVideo()}>播放视频</button>';
+    var template = '<button class="u-btn u-btn-info" on-click={this.showImage()}>\u56FE\u7247\u9884\u89C8</button>\n<button class="u-btn u-btn-success" on-click={this.showVideo()}>\u64AD\u653E\u89C6\u9891</button>';
     var component = new RGUI.Component({
         template: template,
         showImage: function showImage() {

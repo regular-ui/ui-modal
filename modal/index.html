@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/doc.default.min.css">
+<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/docs.default.min.css">
 <link rel="stylesheet" href="../css/index.css">
 <!--[if lt IE9]>
 <script>
@@ -122,40 +122,42 @@
 
         <h2 id="API">API</h2>
 
-<h3 id="Class">Class</h3>
-<h4>Modal</h4>
-<p>继承自<strong>Component</strong>。</p>
-<p></p>
-<div id="j-class"></div>
 
-<h3 id="Options">Options</h3>
-<h4>new Modal()</h4>
-<table>
-    <thead>
-        <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
-    </thead>
-    <tbody>
-        
+    <h3 id="Class">Class</h3>
+    <h4>Modal</h4>
+    <p>继承自<strong></strong>。</p>
+    <p></p>
+    <div id="j-class"></div>
+
+    <h3 id="Options">Options</h3>
+    <h4>new Modal()</h4>
+    <table>
+        <thead>
+            <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
+        </thead>
+        <tbody>
             
-            <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">Object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>模态框标题</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.content</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>模态框内容</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.contentTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside @=&gt; inside</td><td>模态框内容模板，用于支持复杂内容的自定义。</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.okButton</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;确定&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>确定按钮的文字，如果为空则不显示。</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.cancelButton</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;取消&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>取消按钮的文字，如果为空则不显示。</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.disabled</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否禁用。禁用时，确定按钮不可点。</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
+                
             
-            <tr><td class="f-wsn"><code>data.title</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;提示&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>模态框标题</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.content</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>模态框内容</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.contentTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside @=&gt; inside</td><td>模态框内容模板，用于支持复杂内容的自定义。</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.okButton</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;确定&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>确定按钮的文字，如果为空则不显示。</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.cancelButton</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;取消&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>取消按钮的文字，如果为空则不显示。</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.disabled</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否禁用。禁用时，确定按钮不可点。</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
-            
-        
-    </tbody>
-</table>
+        </tbody>
+    </table>
+
 <div id="j-options"></div>
 
 
