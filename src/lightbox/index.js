@@ -3,8 +3,8 @@ import template from './index.rgl';
 
 /**
  * @class Lightbox
- * @extend Component
- * @param {object}                  options.data                     =  绑定属性
+ * @extends Component
+ * @param {Object}                  options.data                     =  绑定属性
  * @param {string='提示'}           options.data.title               => 灯箱标题
  * @param {string=''}               options.data.contentTemplate    @=> 灯箱内容模板，用于支持复杂内容的自定义。
  * @param {string=''}               options.data.class               => 补充class

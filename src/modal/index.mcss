@@ -38,7 +38,7 @@
 
         &:hover { color: #888; }
 
-        &:after {
+        &:before {
             @extend .u-icon;
             @extend .u-icon-close:before;
         }

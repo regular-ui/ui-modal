@@ -1,2 +1,2 @@
-@import './modal/index.mcss';
-@import './lightbox/index.mcss';
+@import './src/modal/index.mcss';
+@import './src/lightbox/index.mcss';

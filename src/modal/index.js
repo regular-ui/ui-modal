@@ -3,8 +3,8 @@ import template from './index.rgl';
 
 /**
  * @class Modal
- * @extend Component
- * @param {object}                  options.data                     =  绑定属性
+ * @extends Component
+ * @param {Object}                  options.data                     =  绑定属性
  * @param {string='提示'}           options.data.title               => 模态框标题
  * @param {string=''}               options.data.content             => 模态框内容
  * @param {string=''}               options.data.contentTemplate    @=> 模态框内容模板，用于支持复杂内容的自定义。
