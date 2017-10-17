@@ -12,6 +12,7 @@ import template from './index.rgl';
  * @param {string='取消'}           options.data.cancelButton        => 取消按钮的文字，如果为空则不显示。
  * @param {boolean=false}           options.data.disabled            => 是否禁用。禁用时，确定按钮不可点。
  * @param {string=''}               options.data.class               => 补充class
+ * @param {boolean=false}           options.data.submitting          => 是否处于提交中状态。
  */
 const Modal = Component.extend({
     name: 'modal',
@@ -27,6 +28,7 @@ const Modal = Component.extend({
             contentTemplate: '',
             okButton: '确定',
             cancelButton: '取消',
+            submitting: false,
         });
         this.supr();
     },
